@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Student</title>
+</head>
+
+<body>
+    <section class="main-login-section">
+        <form action="" method="">
+            <input type="text" placeholder="Username.." />
+            <input type="password" placeholder="Password" id="pass"/>
+            <input type="button" onclick="showPass()" value="Show password" id="button">
+            <input type="submit">
+        </form>
+        <a href="../student/index.html">Login success page</a>
+    </section>
+    <script>
+        let pass = document.querySelector('#pass');
+        let button = document.querySelector('#button');
+
+        function showPass(){
+            passType = pass.type;
+            if(passType == 'password'){
+                pass.type = 'text';
+                button.value = 'Hide password';
+            }else{
+                pass.type = 'password';
+                button.value = 'Show password'
+            }
+
+        }
+    </script>
+</body>
+</html>
